@@ -1,0 +1,107 @@
+#card-container {
+  padding: 50px 0px;
+  margin: auto;
+  width: 80vw;
+  max-width: 1450px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 60px;
+}
+.card {
+  height: 100%;
+  width: 298px;
+  margin: 1vh 0;
+  border-radius: 10px;
+  box-shadow: 10px 14px 10px black;
+  overflow: hidden;
+}
+.image-background {
+  height: 261px;
+  background: radial-gradient(circle at 50%, #ffffff, #feb322 45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s ease-in;
+  transition: all 0.7s ease-out;
+}
+
+.card-image {
+  height: 261px;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #bf0000;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card-text-body {
+  text-align: left;
+  height: 150px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mdb-btn {
+  border: none;
+  background-color: white;
+  text-align: left;
+  font-size: 1.2em;
+  transition: all 0.5s ease;
+}
+
+.delete-btn {
+  font-size: 1em;
+  text-align: left;
+  border: none;
+  background-color: white;
+  transition: 0.5s;
+  
+}
+
+/* ----------- CARD ANIMATIONS ------------- */
+.image-background:hover {
+  height: 100%;
+}
+
+.card-image:hover {
+  transform: scale(1.5);
+}
+
+.card-title:hover {
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #dc1111;
+  font-weight: 600;
+}
+
+.mdb-btn:hover {
+  color: #bf0000;
+  letter-spacing: 0.5px;
+}
+.mdb-btn:active {
+    outline: none;
+    border: none;
+}
+
+.delete-btn:hover {
+  letter-spacing: 2px;
+  padding-left: 7px;
+}
+
+.delete-btn:active {
+  outline: none;
+  border: none;
+}

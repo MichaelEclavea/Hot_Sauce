@@ -1,0 +1,11 @@
+.cardStyle {
+    width: 1em;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.productStyle {
+    width: 2em;
+    height: auto;
+    vertical-align: bottom;
+}

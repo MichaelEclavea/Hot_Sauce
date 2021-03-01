@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import WelcomeScreen from './screens/WelcomeScreen'
+import ProductScreen from './screens/ProductScreen'
+import AddProductScreen from './screens/AddProductScreen'
+import Nav from './components/Nav'
+import data from './data/hotsauces.json'
+import './App.css'
 
 function App() {
+  const {list} = data
+
+  useEffect(() => {
+    let jsonList = JSON.stringify(list)
+    localStorage.setItem('products', jsonList)
+    console.log('LIST', list)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Route path="/" exact component={WelcomeScreen} />
+        <Route path="/product/:id" component={ProductScreen} />
+        <Route path="/add" component={AddProductScreen} />
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
