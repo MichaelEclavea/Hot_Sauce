@@ -14,6 +14,4 @@ const Rating = ({ rating, style }) => {
     )
 }
 
-
-
 export default Rating;

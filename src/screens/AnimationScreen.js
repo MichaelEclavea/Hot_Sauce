@@ -6,7 +6,6 @@ import Animation from '../components/Animation'
 import '../index.css'
 
 const AnimationScreen = (props) => {
-  console.log(props);
   const [products, setProducts] = useState()
   const [showScreen, setShowScreen] = useState('show')
   const [hideScreen, setHideScreen] = useState('hide')
@@ -24,14 +23,14 @@ const AnimationScreen = (props) => {
 
   return (
     <>
-    <div className={showScreen}>
-    <Animation/>
-    </div>
-    <div className={hideScreen}>
-      <Nav />
-      <Header />
-      <Cards products={products} />
-    </div>
+      <div className={showScreen}>
+        <Animation />
+      </div>
+      <div className={hideScreen}>
+        <Nav />
+        <Header />
+        <Cards products={products} />
+      </div>
     </>
   )
 }

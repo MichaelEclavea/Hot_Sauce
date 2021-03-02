@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import '../styles/productScreen.css'
 
 const ProductScreen = () => {
-  // const { list } = data
 
   //------- GETTING PRODUCT FROM URL PARAMS ------ //
   const url = window.location.pathname
@@ -12,17 +11,14 @@ const ProductScreen = () => {
   while(name.includes('%20')) {
     name = name.replace('%20', ' ')
   }
-  console.log('NAME', name);
 
+  //------- FILTERING PRODUCT FROM DATA-FILE ------- //
   let getProducts = localStorage.getItem('products')
   let parsedProducts = JSON.parse(getProducts)
   let product = parsedProducts.filter((each) => each.title === name);
 
-  //------- FILTERING PRODUCT FROM DATA-FILE ------- //
-  // let product = list.filter((each) => each.title === name)
-
   return (
-    <div style={{ margin: 'auto', height: '100vh', }}>
+    <div style={{ margin: 'auto', height: '100vh' }}>
       <section style={{textAlign: 'left', height: 'auto', paddingTop: '9vh'}}>
         <Link to="/" className="back-btn">
           Back

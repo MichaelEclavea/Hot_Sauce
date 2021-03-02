@@ -1,6 +1,6 @@
 .link-section {
-  text-align: left; 
-  height: auto; 
+  text-align: left;
+  height: auto;
   padding-top: 4vh;
 }
 
@@ -18,14 +18,14 @@
 }
 
 .add-title {
-    color: white;
-    font-family: 'Kaushan Script', cursive;
-    font-weight: lighter;
-    font-size: 7rem;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-    text-align: center;
-    line-height: 100%;
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: lighter;
+  font-size: 7rem;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  line-height: 100%;
 }
 
 .show-container p {
@@ -38,8 +38,9 @@
 }
 
 #myForm {
-    padding-top: 25px;
+  padding-top: 25px;
 }
+
 .first-grid {
   font-size: 1.1em;
   display: grid;
@@ -67,6 +68,7 @@ section {
   min-width: 420px;
   padding: 20px;
 }
+
 input {
   color: white;
   font-weight: bold;
@@ -112,7 +114,7 @@ textArea {
   padding: 5px 15px;
   margin-top: 3rem;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 #view-btn:hover {
@@ -122,6 +124,7 @@ textArea {
 #submit-btn {
   display: block;
   font-size: 1.4em;
+  transition: 0.2s;
   margin: auto;
   padding: 10px 20px;
   border-radius: 10px;
@@ -130,6 +133,7 @@ textArea {
 }
 
 #submit-btn:hover {
-    transform: scale(1.1);
-    background-color: #feb322;
+  transform: scale(1.1);
+  background-color: #feb322;
+  color: white;
 }
