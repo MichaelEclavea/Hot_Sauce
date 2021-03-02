@@ -32,7 +32,7 @@
   transition: 0.5s;
 }
 
-#nav-link:hover{
-    letter-spacing: 2px;
-    color: #f0d8a6;
+#nav-link:hover {
+  letter-spacing: 2px;
+  color: #f0d8a6;
 }

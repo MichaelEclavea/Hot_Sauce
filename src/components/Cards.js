@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 import Rating from './Rating'
 import Loader from './Loader'
 import { Image } from 'react-bootstrap'
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBCol } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBCol } from 'mdbreact'
 import '../styles/cards.css'
 
 const Cards = ({ products }) => {
-  const [productList, setProductList] = useState(null);
-  const [emptyTitle, SetEmptyTitle] = useState('');
+  const [productList, setProductList] = useState(null)
+  const [emptyTitle, SetEmptyTitle] = useState('')
 
   useEffect(() => {
       if(products) {
@@ -17,21 +17,20 @@ const Cards = ({ products }) => {
   }, [products])
 
   const deleteHandler = (e) => {
-    const { name } = e.target;
+    const { name } = e.target
     let getProducts = localStorage.getItem('products')
     let parsedProducts = JSON.parse(getProducts)
-    let newList = parsedProducts.filter(each => each.title !== name);
+    let newList = parsedProducts.filter(each => each.title !== name)
     setProductList(newList)
-    localStorage.setItem('products', JSON.stringify(newList));
-
+    localStorage.setItem('products', JSON.stringify(newList))
     if(productList.length === 1){
-      SetEmptyTitle(<h1 className='temp-title'>is empty! 😩 </h1>);
+      SetEmptyTitle(<h1 className='temp-title'>is empty! 😩 </h1>)
     }
   }
-    return (
-      <>
-        {emptyTitle}
-        <div id="card-container">
+  return (
+    <>
+      {emptyTitle}
+      <div id="card-container">
       { !productList ? <Loader/> : 
         productList.map((each) => (
           <MDBCol key={each.id + 1} style={{ maxWidth: "298px", height: '411px', marginBottom: '1rem'}}>
@@ -52,8 +51,8 @@ const Cards = ({ products }) => {
           </MDBCol>
       ))}
       </div>
-      </>
-    )
+    </>
+  )
 }
 
 

@@ -15,7 +15,6 @@ function App() {
     let jsonList = JSON.stringify(list)
     localStorage.setItem('products', jsonList)
     setMount(!mount)
-    console.log('LIST', list)
   }
 
   if(!mount) {
