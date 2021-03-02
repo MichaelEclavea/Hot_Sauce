@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import Reward  from "react-rewards";
 import '../styles/addProduct.css'
 
 const AddProductScreen = () => {
+  const rewardRef = React.useRef();
+
   const [showContainer, setShowContainer] = useState('show-container')
   const [hideContainer, setHideContainer] = useState('hide-container')
   const [backButton, setBackButton] = useState('Back')
@@ -49,6 +52,7 @@ const AddProductScreen = () => {
     if (checkInputs === false) {
       alert('Please fix errors with 🔥')
     } else {
+      rewardRef.current?.rewardMe();
       let getProducts = localStorage.getItem('products')
       let parsedProducts = JSON.parse(getProducts)
       let newList = parsedProducts.concat(product)
@@ -84,9 +88,11 @@ const AddProductScreen = () => {
   return (
     <>
       <section className="link-section">
+      <Reward ref={rewardRef} type={"confetti"} config={config}>
         <Link to="/" id={buttonId}>
           {backButton}
         </Link>
+        </Reward>
       </section>
       <div className={showContainer}>
         <h1 className="add-title">Add Your HotSauce!</h1>
@@ -149,7 +155,9 @@ const AddProductScreen = () => {
             />
           </section>
           <br></br>
+          
           <button type="submit" id="submit-btn">Add</button>
+          
         </form>
       </div>
       <div className={hideContainer}>
@@ -157,6 +165,20 @@ const AddProductScreen = () => {
       </div>
     </>
   )
+}
+
+const config = {
+  angle: -45,
+  decay: 0.90,
+  spread: 500,
+  startVelocity: 20,
+  elementCount: 55,
+  elementSize: 10,
+  lifetime: 500,
+  zIndex: 10,
+  springAnimation: true,
+  rewardPunish: "reward",
+  type: "confetti"
 }
 
 export default AddProductScreen
