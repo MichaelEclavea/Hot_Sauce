@@ -3,11 +3,7 @@
 ## Project Overview
 This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that every user would enjoy! Using React.js as the frontend framework, other tools are optional for any needed enhancements.  
 
-### Screen shots of stock templates: 
-<img src='./uml/grid.jpg' width='408' height='308'></img>
-<img src='./uml/detail.jpg' width='408' height='308'></img>
-
-### Project Objectives:
+## Project Objectives:
 1. Landing page will display all hot sauce's in json file. 
 2. User will have the option to delete any item in the list. 
 3. If any item is clicked, user will be taken to single product page with chosen product displayed. All
@@ -21,9 +17,11 @@ details should be available to view.
 3. Add product page: takes all values for adding new item to existing sauce list and saves new item to localStorage
 4. Single product page: gets url params (product name) and filters from product list matching product name, displays single product returned. 
 
+### Screen shots of stock templates: 
+<img src='./uml/grid.jpg' width='408' height='308'></img>
+<img src='./uml/detail.jpg' width='408' height='308'></img>
 
 ## Run Project Locally
-
 #### Steps to install repo: 
 1. from the main page of github repository, click the clipboard to copy repo's url.  
 2. From your terminal, in your local computer, pick a location where you would like the project to be saved. 
