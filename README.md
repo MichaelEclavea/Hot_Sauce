@@ -4,9 +4,8 @@
 This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that a user would enjoy. Using React.js as the frontend language, 
 
 ### Screen shots of stock templates: 
-![Grids](./uml/grid.jpg)
-![details](./uml/detail.jpg)
 <img src='./uml/grid.jpg' width='408' height='308'></img>
+<img src='./uml/detail.jpg' width='408' height='308'></img>
 
 ### Project Objectives:
 1. Landing page will display all hot sauce's in json file. 
