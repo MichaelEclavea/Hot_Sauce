@@ -1,7 +1,7 @@
 # Hot Sauce Project Challenge
 
 ## Project Overview
-This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that a user would enjoy. Using React.js as the frontend language, 
+This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that every user would enjoy! Using React.js as the frontend framework, other tools are optional for any needed enhancements.  
 
 ### Screen shots of stock templates: 
 <img src='./uml/grid.jpg' width='408' height='308'></img>
