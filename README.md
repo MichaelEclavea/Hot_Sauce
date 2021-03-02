@@ -1,7 +1,10 @@
 # Hot Sauce Project Challenge 🌶 🔥 🥵
 
 ## Project Overview
-This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that every user would enjoy! Using React.js as the frontend framework, other tools are optional for any needed enhancements.  
+This is a code challenge geared toward design and user experience. Given the image templates as a reference, the challenge is to create a site that every user would enjoy! Using React.js as the frontend framework, other tools are optional for any needed enhancements. 
+
+##Personal Notes:
+I have personally manipulated the stock json file by adding a spicy rating to the existing objects. By thinking, if I was a user and I was looking at a list of hot sauce's what else would I like to see? Spicy levels for the hot sauce was a must! I have used affinity designer to create little peppers and half peppers to indicate their spicy rating.  
 
 ## Project Objectives: 🗒
 1. Landing page will display all hot sauce's in json file. 
