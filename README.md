@@ -6,6 +6,7 @@ This is a code challenge geared toward design and user experience. Given the ima
 ### Screen shots of stock templates: 
 ![Grids](./uml/grid.jpg)
 ![details](./uml/detail.jpg)
+<img src='./uml/grid.jpg' width='408' height='308'></img>
 
 ### Project Objectives:
 1. Landing page will display all hot sauce's in json file. 
