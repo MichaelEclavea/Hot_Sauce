@@ -17,21 +17,31 @@ details should be available to view.
 
 ## Project Functionality
 1. App.js will initialize json file to localStorage
-2. Landing page actions: delete item, render items from localStorage, sends Card.js items from list as props.
-3. Add product page: takes all values for adding new item to sauce list, saves to localStorage
+2. Landing page actions: delete item, render items from localStorage, send data to Cards.js all items from the list as props.
+3. Add product page: takes all values for adding new item to existing sauce list and saves new item to localStorage
 4. Single product page: gets url params (product name) and filters from product list matching product name, displays single product returned. 
 
 
 ## Run Project Locally
 
-#### Steps: 
-1. git clone from repo
-*install dependencies* 
-2. From your terminal, in the project root folder,
-run: $ npm i
-*after dependencies install* 
-3. From your terminal, run $ npm start.
-** Hot Sauce app will run on localhost in browser.
+#### Steps to install repo: 
+1. from the main page of github repository, click the clipboard to copy repo's url.  
+2. From your terminal, in your local computer, pick a location where you would like the project to be saved. 
+3. Enter the command in your terminal: *git clone* (copied url)
+4. Press: *enter*
+
+Once the repo is finished installing...
+5. Enter the command in your terminal: *npm i*
+6. Press: *enter*
+
+##### *npm i* - install's all the project dependencies needed to run the application. 
+
+After dependencies are finished installing... 
+- Now its time to start the application
+7. From your terminal type: *npm start*
+8. Press: *enter*
+
+###### Congrats! Hot Sauce app will run on localhost in the browser.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Runs the app in the development mode.\
