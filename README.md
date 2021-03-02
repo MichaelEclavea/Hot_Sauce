@@ -28,13 +28,14 @@ details should be available to view.
 3. Enter the command in your terminal: *git clone* (copied url)
 4. Press: *enter*
 
-Once the repo is finished installing...
+**Once the repo is finished installing...**
+
 5. Enter the command in your terminal: *npm i*
 6. Press: *enter*
 
-##### *npm i* - install's all the project dependencies needed to run the application. 
+**npm i - install's all the project dependencies needed to run the application.** 
 
-After dependencies are finished installing... 
+**After dependencies are finished installing...** 
 - Now its time to start the application
 7. From your terminal type: *npm start*
 8. Press: *enter*
