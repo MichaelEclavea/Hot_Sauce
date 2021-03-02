@@ -2,21 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
 import Loader from './Loader'
-import data from '../data/hotsauces.json'
 import { Image } from 'react-bootstrap'
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBCol } from 'mdbreact';
 import '../styles/cards.css'
 
 const Cards = ({ products }) => {
-  const [productList, setProductList] = useState();
+  const [productList, setProductList] = useState(null);
   const [emptyTitle, SetEmptyTitle] = useState('');
 
-
   useEffect(() => {
-    if(products) {
-      setProductList(products)
-      console.log('CARDS USEEFFECT', products)
-    }
+      if(products) {
+       setProductList(products)
+      }
   }, [products])
 
   const deleteHandler = (e) => {
