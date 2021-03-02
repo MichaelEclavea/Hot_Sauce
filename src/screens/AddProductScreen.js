@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../styles/addProduct.css'
 const AddProductScreen = () => {
   const [showContainer, setShowContainer] = useState('show-container')
   const [hideContainer, setHideContainer] = useState('hide-container')
+  const [backButton, setBackButton] = useState('Back');
+  const [buttonId, setButtonId] = useState('back-btn')
   const [productHeaders, setProductHeaders] = useState({
     title: 'Name',
     subtitle: 'Subtitle',
@@ -12,7 +14,7 @@ const AddProductScreen = () => {
     description: 'Description'
   })
     const [product, setProduct] = useState({
-      id: 8,
+      id: Math.floor(Math.random(8 * 50) + 1),
       title: '',
       subtitle: '',
       description: '',
@@ -48,11 +50,16 @@ const AddProductScreen = () => {
       } else {
         let getProducts = localStorage.getItem('products')
         let parsedProducts = JSON.parse(getProducts)
+        setProduct({...product, id: parsedProducts.length})
+
         let newList = parsedProducts.concat(product)
         let jsonList = JSON.stringify(newList)
         localStorage.setItem('products', jsonList)
+        setBackButton('View Updated List...')
+        setButtonId('view-btn')
         setShowContainer('hide-container')
         setHideContainer('show-container')
+        console.log(product)
       }
     }
   
@@ -78,9 +85,9 @@ const AddProductScreen = () => {
   
     return (
       <>
-      <section style={{textAlign: 'left', height: 'auto', paddingTop: '4vh'}}>
-        <Link to="/" className="back-btn">
-          Back
+      <section className='link-section'>
+        <Link to="/" id={buttonId}>
+          {backButton}
         </Link>
       </section>
         <div className={showContainer}>
@@ -105,7 +112,7 @@ const AddProductScreen = () => {
 
             <section>
             <p>{productHeaders.rating}</p>
-            <input type="number" placeholder='Enter spice rating...' name='rating' min="1" max="5" value={product.rating} onChange={handleInput}></input>
+            <input type="number" placeholder='Enter spice rating...' name='rating' min="1" max="5" step='any' value={product.rating} onChange={handleInput}></input>
             </section>
             </div>
             <section>

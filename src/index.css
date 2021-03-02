@@ -26,3 +26,41 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.hide{
+  display: none;
+  animation: fade-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  transition: 1s;
+}
+
+
+.show{
+  display: relative;
+  animation: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: 0.5s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

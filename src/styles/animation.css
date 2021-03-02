@@ -1,0 +1,41 @@
+#logo-container {
+    display: flex;
+    align-items: baseline;
+    min-width: 60vw;
+}
+
+#img1 {
+    animation: sauce-rotate;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition: 0.5s;
+}
+
+@keyframes sauce-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(110deg);
+    }
+}
+
+#img2 {
+    animation: text-stretch; 
+    animation-duration: 3s;
+    animation-delay: 2s;
+    transition: 0.5s;
+    width: 0px;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+    text-align: left;
+}
+
+@keyframes text-stretch {
+    from {
+        width: 0px; 
+    }
+    to {
+        width: 100%;
+    }
+}

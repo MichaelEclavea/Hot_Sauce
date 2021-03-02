@@ -16,9 +16,10 @@ const WelcomeScreen = () => {
     <>
       <Nav />
       <Header />
-      <Cards products={products} />
+      <Cards products={products}  />
     </>
   )
 }
 
 export default WelcomeScreen
+
