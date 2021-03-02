@@ -53,6 +53,7 @@ const AddProductScreen = () => {
       alert('Please fix errors with 🔥')
     } else {
       rewardRef.current?.rewardMe();
+      rewardRef.current?.rewardMe();
       let getProducts = localStorage.getItem('products')
       let parsedProducts = JSON.parse(getProducts)
       let newList = parsedProducts.concat(product)
@@ -161,24 +162,27 @@ const AddProductScreen = () => {
         </form>
       </div>
       <div className={hideContainer}>
+      <Reward ref={rewardRef} type={"confetti"} config={config}>
         <h1 className="product-title">Your HotSauce has been Added! 🤤 </h1>
+        </Reward>
       </div>
     </>
   )
 }
 
 const config = {
-  angle: -45,
+  angle: 10,
   decay: 0.90,
-  spread: 500,
+  spread: 900,
   startVelocity: 20,
   elementCount: 55,
   elementSize: 10,
-  lifetime: 500,
+  lifetime: 350,
   zIndex: 10,
   springAnimation: true,
   rewardPunish: "reward",
-  type: "confetti"
+  type: "confetti",
+  emoji: ['🌶']
 }
 
 export default AddProductScreen
