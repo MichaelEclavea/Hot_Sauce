@@ -11,15 +11,15 @@ function App() {
   const {list} = data
   const [mount, setMount] = useState(false)
 
-  const renderMount = () => {
+  // const renderMount = () => {
     let jsonList = JSON.stringify(list)
     localStorage.setItem('products', jsonList)
-    setMount(!mount)
-  }
+  //   setMount(!mount)
+  // }
 
-  if(!mount) {
-    renderMount()
-  }
+  // if(!mount) {
+  //   renderMount()
+  // }
 
   return (
     <Router>

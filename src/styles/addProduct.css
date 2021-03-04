@@ -1,7 +1,6 @@
 .link-section {
   text-align: left;
   height: auto;
-  padding-top: 4vh;
 }
 
 .hide-container {
@@ -15,10 +14,12 @@
   height: 100%;
   min-width: 420px;
   padding: 20px;
+  margin: auto;
 }
 
 .add-title {
   color: white;
+  /* color: #d83529; */
   font-family: 'Kaushan Script', cursive;
   font-weight: lighter;
   font-size: 7rem;
@@ -76,11 +77,13 @@ input {
   width: 100%;
   height: 2.5em;
   background-color: #909090;
+  /* background-color: #dca436; */
   padding-left: 10px;
 }
 
 textArea {
   background-color: #909090;
+  /* background-color: #dca436; */
   color: white;
   font-weight: bold;
   font-size: 1.4em;
@@ -94,7 +97,7 @@ textArea {
   font-family: 'Kaushan Script';
   font-size: 2rem;
   padding: 5px 15px;
-  margin-top: 3rem;
+  margin-top: 4rem;
   text-decoration: none;
   transition: 0.5s;
 }
