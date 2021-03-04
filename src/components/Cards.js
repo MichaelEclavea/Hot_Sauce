@@ -18,13 +18,18 @@ const Cards = ({ products }) => {
 
   const deleteHandler = (e) => {
     const { name } = e.target
-    let getProducts = localStorage.getItem('products')
-    let parsedProducts = JSON.parse(getProducts)
-    let newList = parsedProducts.filter(each => each.title !== name)
-    setProductList(newList)
-    localStorage.setItem('products', JSON.stringify(newList))
-    if(productList.length === 1){
-      SetEmptyTitle(<h1 className='temp-title'>is empty! 😩 </h1>)
+    let answer = window.confirm('Are you sure you want to delete item?');
+    if(!answer){
+      return;
+    } else {
+      let getProducts = localStorage.getItem('products')
+      let parsedProducts = JSON.parse(getProducts)
+      let newList = parsedProducts.filter(each => each.title !== name)
+      setProductList(newList)
+      localStorage.setItem('products', JSON.stringify(newList))
+      if(productList.length === 1){
+        SetEmptyTitle(<h1 className='temp-title'>is empty! 😩 </h1>)
+      }
     }
   }
   return (

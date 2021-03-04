@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import Reward  from "react-rewards";
+import Reward  from 'react-rewards'
+import Nav from '../components/Nav'
 import '../styles/addProduct.css'
 
 const AddProductScreen = () => {
@@ -68,7 +69,7 @@ const AddProductScreen = () => {
 
   const handleInput = (e) => {
     e.preventDefault()
-    const {name} = e.target
+    const { name } = e.target
     if (name === 'title') {
       setProduct({...product, title: e.target.value})
     }
